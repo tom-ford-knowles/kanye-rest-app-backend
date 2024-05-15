@@ -8,3 +8,4 @@ docker run --rm \
     composer install --ignore-platform-reqs \
 
 php artisan key:generate
+php artisan migrate
