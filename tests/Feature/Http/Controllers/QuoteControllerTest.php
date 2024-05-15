@@ -3,6 +3,7 @@
 namespace Tests\Feature\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
@@ -25,6 +26,10 @@ class QuoteControllerTest extends TestCase
 
     public function test_user_can_index_quotes_and_returns_5(): void
     {
+        Http::fake([
+            'https://api.kanye.rest' => Http::response(['quote' => 'hello']),
+        ]);
+
         Sanctum::actingAs(
             $this->user,
             ['*']
