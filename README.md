@@ -1,6 +1,6 @@
 # Kanye Rest API Project
 
-This is a Laravel 10/PHP 8.2 project which allows you to retrieve a set of random quotes from the Kanye Rest API.
+This is a Laravel 11/PHP 8.2 project which allows you to retrieve a set of random quotes from the Kanye Rest API.
 
 
 ## Setup
@@ -9,9 +9,9 @@ This project uses Laravel Sail to provide a docker container for ease of setup a
 
  - Clone this repo to your local machine
  - Navigate to the repo so that you are inside it
- - Type the command `./setup.sh` and this will download all composer dependencies.
- - Type `./vendor/bin/sail up -d`
- - Type `./vendor/bin/sail artisan migrate`
+ - Run the command `./setup.sh` and this will download all composer dependencies.
+ - Run `./vendor/bin/sail up -d`
+ - Run `./vendor/bin/sail artisan migrate`
  - The application is then ready to go
 
 ## Running the test suite
