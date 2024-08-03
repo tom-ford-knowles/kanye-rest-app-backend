@@ -42,4 +42,4 @@ Elements:
 -   [x] The above features are tested with Unit tests (nice to have)
 -   [x] Provide a README on how we can set up and test the application (must)
 -   [x] Implementation of API using Laravel Manager Design Pattern (Plus)
--   [] Making third-party API response quick by cache (Plus)
+-   [ ] Making third-party API response quick by cache (Plus)
