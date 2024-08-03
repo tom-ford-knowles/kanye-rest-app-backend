@@ -37,7 +37,7 @@ To run the endpoints:
 Elements:
 
 -   [x] A rest API that shows 5 random Kayne West quotes (must) - /quotes
--   [x] There should be an endpoint to refresh the quotes and fetch the next 5 random quotes (must) - /quotes
+-   [x] There should be an endpoint to refresh the quotes and fetch the next 5 random quotes (must) - /quotes?fetch_new_quotes=1
 -   [x] Authentication for these APIs should be done with an API token, not using any package - Achieved using Laravel Sanctum
 -   [x] The above features are tested with Feature tests (must) - tests/Feature/Http/Controllers
 -   [x] Provide a README on how we can set up and test the application (must)
