@@ -2,17 +2,16 @@
 
 This is a Laravel 11/PHP 8.2 project which allows you to retrieve a set of random quotes from the Kanye Rest API.
 
-
 ## Setup
 
 This project uses Laravel Sail to provide a docker container for ease of setup and I have provided a bash script to download everything needed to get up and running. The steps to get fully up and running are below:
 
- - Clone this repo to your local machine
- - Navigate to the repo so that you are inside it
- - Run the command `./setup.sh` and this will download all composer dependencies.
- - Run `./vendor/bin/sail up -d`
- - Run `./vendor/bin/sail artisan migrate`
- - The application is then ready to go
+-   Clone this repo to your local machine
+-   Navigate to the repo so that you are inside it
+-   Run the command `./setup.sh` and this will download all composer dependencies.
+-   Run `./vendor/bin/sail up -d`
+-   Run `./vendor/bin/sail artisan migrate`
+-   The application is then ready to go
 
 ## Running the test suite
 
@@ -30,6 +29,17 @@ Below is a JSON Postman collection containing all endpoints. Copy this block of 
 
 To run the endpoints:
 
- 1. Register a user using the POST Register endpoint. Example details are set here. This will return a bearer token. You can use this to access the GET Quotes endpoint or use the POST Login endpoint to generate a new token.
- 2. If this token expires, use the POST Login endpoint with your email and password to generate a new token.
- 3. Replace the token in the Authorisation section of the GET Quotes endpoint with the token you have generated. You can then run the request and get a list of 5 quotes. If you run the request again you will get a new list of quotes.
+1.  Register a user using the POST Register endpoint. Example details are set here. This will return a bearer token. You can use this to access the GET Quotes endpoint or use the POST Login endpoint to generate a new token.
+2.  If this token expires, use the POST Login endpoint with your email and password to generate a new token.
+3.  Replace the token in the Authorisation section of the GET Quotes endpoint with the token you have generated. You can then run the request and get a list of 5 quotes. If you run the request again you will get a new list of quotes.
+
+Elements:
+
+-   A rest API that shows 5 random Kayne West quotes (must) - /quotes [X]
+-   There should be an endpoint to refresh the quotes and fetch the next 5 random quotes (must) - /quotes [X]
+-   Authentication for these APIs should be done with an API token, not using any package - Achieved using Laravel Sanctum [X]
+-   The above features are tested with Feature tests (must) - tests/Feature/Http/Controllers [X]
+-   The above features are tested with Unit tests (nice to have)
+-   Provide a README on how we can set up and test the application (must) [X]
+-   Implementation of API using Laravel Manager Design Pattern (Plus) [X]
+-   Making third-party API response quick by cache (Plus)
