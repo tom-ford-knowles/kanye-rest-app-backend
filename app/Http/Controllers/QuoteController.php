@@ -3,19 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Facades\Quotes;
+use App\Http\Requests\IndexQuotesRequest;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Arr;
 
 class QuoteController extends Controller
 {
-    public function index(): JsonResponse
+    public function index(IndexQuotesRequest $request): JsonResponse
     {
-        $responses = Quotes::fetch();
+        $responses = Quotes::fetch($request->get('fetch_new_quotes', false));
 
         return response()->json([
-            'quotes' => Arr::map($responses, function ($response) {
-                return $response->json('quote');
-            }),
+            'quotes' => $responses,
         ]);
     }
 }

@@ -10,6 +10,7 @@ This project uses Laravel Sail to provide a docker container for ease of setup a
 -   Navigate to the repo so that you are inside it
 -   Run the command `./setup.sh` and this will download all composer dependencies.
 -   Run `./vendor/bin/sail up -d`
+-   Wait for around 1 minute for the database to finish booting
 -   Run `./vendor/bin/sail artisan migrate`
 -   The application is then ready to go
 
@@ -42,4 +43,4 @@ Elements:
 -   [ ] The above features are tested with Unit tests (nice to have)
 -   [x] Provide a README on how we can set up and test the application (must)
 -   [x] Implementation of API using Laravel Manager Design Pattern (Plus)
--   [ ] Making third-party API response quick by cache (Plus)
+-   [x] Making third-party API response quick by cache (Plus)

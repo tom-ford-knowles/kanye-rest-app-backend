@@ -4,5 +4,5 @@ namespace App\Quotes\Contracts;
 
 interface QuotesInterface
 {
-    public function fetch(): array;
+    public function fetch(bool $refresh = false): array;
 }

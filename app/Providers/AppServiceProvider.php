@@ -12,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        app()->bind('quotes', QuotesManager::class);
+        app()->singleton('quotes', QuotesManager::class);
     }
 
     /**
